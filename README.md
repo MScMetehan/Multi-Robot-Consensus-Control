@@ -25,7 +25,7 @@ $$
 \begin{bmatrix} \dot{x} \\\\ \dot{y} \\\\ \dot{\theta} \end{bmatrix} = \begin{bmatrix} \cos\theta & 0 \\\\ \sin\theta & 0 \\\\ 0 & 1 \end{bmatrix} \begin{bmatrix} v \\\\ \omega \end{bmatrix}
 $$
 
-*Constraints: Wheel radius $\rho_u = 0.01m$, Speed range $r = [-150, 150]$ rad/s.*
+**Constraints:** Wheel radius $\rho_u = 0.01$ m, Speed range $r = [-150, 150]$ rad/s.
 ### 2. Graph-Based Consensus (Phase I)
 Robots agree on a Rendez-vous point $p_{rv}$ using a directed communication graph and a Nearest Neighbor (NN) stochastic matrix $P$:
 $$x(k+1) = P \cdot x(k)$$
