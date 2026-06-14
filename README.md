@@ -20,9 +20,11 @@ This repository hosts the modeling and control of a multi-agent system comprisin
 
 ### 1. Unicycle Model
 Each agent follows non-holonomic unicycle kinematics:
+
 $$
 \begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix} = \begin{bmatrix} \cos\theta & 0 \\ \sin\theta & 0 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} v \\ \omega \end{bmatrix}
 $$
+
 *Constraints: Wheel radius $\rho_u = 0.01m$, Speed range $r = [-150, 150] rad/s$.*
 
 ### 2. Graph-Based Consensus (Phase I)
@@ -47,7 +49,8 @@ Four strategies were evaluated for tracking a circular path ($R=1m, \omega_d=1ra
 
 **Key Innovation: Singularity Robustness**
 In *Feedback Linearization (XY)*, a singularity occurs at $v=0$ (causing $\omega \to \infty$). We implemented a threshold-based acceleration strategy:
-> *If $v < \text{threshold}$, a constant $\omega$ input is provided to accelerate the unicycle, ensuring $v \neq 0$ and maintaining controller stability.*
+
+> If $v < v_{th}$, a constant $\omega$ input is provided to accelerate the unicycle, ensuring $v \neq 0$ and maintaining controller stability.
 
 ---
 
