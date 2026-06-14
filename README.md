@@ -64,15 +64,9 @@ We compared the controllers using **Mean Squared Error (MSE)** and **Mean Input 
 ---
 
 ## 📁 Repository Structure
-```text
-┣ 📂 models
-┃ ┣ 📜 unicycle.slx              # Multi-robot simulation (Consensus + Regulation + Tracking)
-┃ ┗ 📜 unicycle_analysis.slx     # Single unicycle evaluation
-┣ 📂 scripts
-┃ ┗ 📜 script.mlx                # LIVE Script: Parameters, Graph Design, and Plots
-┣ 📂 docs
-┃ ┗ 📜 RendezVousUnicycleControl.pptx # Technical presentation & mathematical proofs
-┗ 📜 README.md
+* `unicycle.slx` & `unicycle_analysis.slx`: Main Simulink models containing the control logic, switching mechanisms, and unicycle kinematics.
+* `script.mlx`: MATLAB Live Script for parameter initialization, graph generation, and performance metrics calculation.
+* `RendezVousUnicycleControl.pptx / .pdf`: Comprehensive presentation detailing the theoretical background, controller design, and simulation results.
 
 ---
 
