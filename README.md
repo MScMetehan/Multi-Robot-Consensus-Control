@@ -22,10 +22,10 @@ This repository hosts the modeling and control of a multi-agent system comprisin
 Each agent follows non-holonomic unicycle kinematics:
 
 $$
-\begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{\theta} \end{bmatrix} = \begin{bmatrix} \cos\theta & 0 \\ \sin\theta & 0 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} v \\ \omega \end{bmatrix}
+\begin{bmatrix} \dot{x} & \dot{y} & \dot{\theta} \end{bmatrix}^T = \begin{bmatrix} \cos\theta & 0 \\\\ \sin\theta & 0 \\\\ 0 & 1 \end{bmatrix} \begin{bmatrix} v & \omega \end{bmatrix}^T
 $$
 
-*Constraints: Wheel radius $\rho_u = 0.01m$, Speed range $r = [-150, 150] rad/s$.*
+*Constraints: Wheel radius $\rho_u = 0.01m$, Speed range $r = [-150, 150]$ rad/s.*
 
 ### 2. Graph-Based Consensus (Phase I)
 Robots agree on a Rendez-vous point $p_{rv}$ using a directed communication graph and a Nearest Neighbor (NN) stochastic matrix $P$:
@@ -69,7 +69,7 @@ We compared the controllers using **Mean Squared Error (MSE)** and **Mean Input 
 ## 📁 Repository Structure
 * `unicycle.slx` & `unicycle_analysis.slx`: Main Simulink models containing the control logic, switching mechanisms, and unicycle kinematics.
 * `script.mlx`: MATLAB Live Script for parameter initialization, graph generation, and performance metrics calculation.
-* `RendezVousUnicycleControl.pptx / .pdf`: Comprehensive presentation detailing the theoretical background, controller design, and simulation results.
+* `RendezVousUnicycleControl.pptx`: Comprehensive presentation detailing the theoretical background, controller design, and simulation results.
 
 ---
 
